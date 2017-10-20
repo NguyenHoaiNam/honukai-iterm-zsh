@@ -2,7 +2,7 @@
 
 # Machine name.
 function box_name {
-    [ -f ~/.box-name ] && cat ~/.box-name || echo $HOST
+    [ -f ~/.box-name ] && cat ~/.box-name || echo MBP
 }
 
 # Directory info.
@@ -47,8 +47,7 @@ PROMPT="
 %{$fg[white]%}in \
 %{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
-${git_info} \
-%{$fg[white]%}[%*]
+${git_info}
 %{$terminfo[bold]$fg[red]%}→ %{$reset_color%}"
 
 if [[ "$USER" == "root" ]]; then
@@ -60,7 +59,6 @@ PROMPT="
 %{$fg[white]%}in \
 %{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
-${git_info} \
-%{$fg[white]%}[%*]
+${git_info}
 %{$terminfo[bold]$fg[red]%}→ %{$reset_color%}"
 fi
